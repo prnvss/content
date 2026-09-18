@@ -65,3 +65,16 @@ existing `videoconfig.txt`:
 - Vertical sync: **Off** (or **On** only if you use G-Sync and want it to handle the ceiling)
 - Power management: **Prefer maximum performance**
 - Texture filtering quality: **High performance**
+
+## Two videoconfig variants
+
+You reported 200+ fps on ultra before the FOV change, so try the light-touch file first:
+
+| File | What it changes | When to use |
+|---|---|---|
+| `videoconfig-ultra.txt` | Only adaptive resolution off and V-Sync off. Every visual setting stays at your ultra values. | Try this first with the fps_max cap from autoexec. If lows hold above the cap in fights, you're done. |
+| `videoconfig.txt` | The above plus AO/volumetrics/shadows/AA/effects turned down. | If ultra still dips below the cap at FOV 120. |
+
+Whichever you pick, rename it to `videoconfig.txt` in `Saved Games\Respawn\Apex\local\` and set it read-only.
+
+`profile.cfg` needs no edits. Your `cl_fovScale "1.7"` is already there and it is the only FPS-relevant line in that file.
